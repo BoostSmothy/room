@@ -32,9 +32,6 @@
     &__lists{
         
         display: flex;
-        
-        
-        
 
         @media ($desktop) {
             justify-content: center;
@@ -46,7 +43,7 @@
     &__item{
         width: 170px;
         margin-bottom: 20px;
-        margin-right: 1.4rem;
+        margin-right: 1rem;
         @media (screen) {
             margin-right: 0;
         }
@@ -134,7 +131,11 @@
     &__mailing{
         display: flex;
         flex-direction: column;
-        width: 327px;
+        
+
+        @media ($desktop) {
+            width: 327px;
+        }
 
         &-title,&-text{
             margin-bottom: 20px;

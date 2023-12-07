@@ -22,7 +22,11 @@
     }
 
     &__title{
+        display: flex;
+        justify-content: center;
         @include h2($fontsize: 24px, $color: $forTitle, $lineheight: 28px);
-        
+        @media ($desktop) {
+            justify-content: start;
+        }
     }
 }

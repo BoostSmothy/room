@@ -263,10 +263,17 @@
   }
 }
 .gallery__title {
+  display: flex;
+  justify-content: center;
   font-family: "Robot";
   font-size: 24px;
   color: #1A1A1A;
   line-height: 28px;
+}
+@media (min-width: 1024px) {
+  .gallery__title {
+    justify-content: start;
+  }
 }
 
 .brand {
@@ -855,7 +862,7 @@
 .footer__item {
   width: 170px;
   margin-bottom: 20px;
-  margin-right: 1.4rem;
+  margin-right: 1rem;
 }
 @media (screen) {
   .footer__item {
@@ -929,7 +936,11 @@
 .footer__mailing {
   display: flex;
   flex-direction: column;
-  width: 327px;
+}
+@media (min-width: 1024px) {
+  .footer__mailing {
+    width: 327px;
+  }
 }
 .footer__mailing-title, .footer__mailing-text {
   margin-bottom: 20px;
