@@ -1,0 +1,37 @@
+@mixin h1($lineHeight: 58px){
+    font-family: $fontRobot;
+    font-size: 48px;
+    color: $forTitle;
+    line-height: $lineHeight;
+}
+
+@mixin h2($fontsize: 48px, $color: $forTitle, $lineheight: 1.2){
+    font-family: $fontRobot;
+    font-size: $fontsize;
+    color: $color;
+    line-height: $lineheight;
+}
+
+
+@mixin h3($fontsize: 24px, $color: $forTitle, $lineheight: 24px){
+    font-family: $fontRobot;
+    font-size: $fontsize;
+    color: $color;
+    line-height: $lineheight;
+}
+
+@mixin text($fontsize: 16px, $color: $forText, $lineheight: 1.5){
+    font-size: $fontsize;
+    font-family: $fontRobot;
+    color: $color;
+    line-height: $lineheight;
+
+}
+
+
+@mixin section($padding: 50px 56px 100px 56px){
+    display: flex;
+    flex-direction: column;
+    padding: $padding;
+}
+

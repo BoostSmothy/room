@@ -1,0 +1,48 @@
+.introduction{
+    @include section();
+
+
+
+    &__img{
+
+        margin-bottom: 82px;
+
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media ($desktop) {
+            flex-direction: row;
+        }
+    }
+
+    &__title{
+        
+        @include h1($lineHeight: 1.4);
+        font-size: 34px;
+        margin-bottom: 2rem;
+
+        @media ($desktop) {
+            margin-bottom: 0;
+            width: 355px;
+            @include h1();
+            margin-right: 136px;
+        }
+        
+    }
+
+    &__text{
+       
+        width: 355px;
+        @include text($fontsize: 18px, $color: $forText, $lineheight: 40px);
+        @media ($desktop) {
+            width: 569px;
+            @include text($fontsize: 24px, $color: $forText, $lineheight: 40px); 
+        }
+        
+    }
+}

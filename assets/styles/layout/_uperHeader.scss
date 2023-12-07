@@ -1,0 +1,49 @@
+.upheader{
+    background-color: $bgColorUpHeader;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    @include text($fontsize: 12px, $color: $forText, $lineheight: 1.5);
+
+    @media ($desktop) {
+        @include text($lineheight: 2.75);
+    }
+    
+    padding: 0.3rem 2.5rem;
+
+    &__title{
+        margin-right: 2.5rem;
+    }
+
+    &__contact{
+        display: flex;
+        flex-direction: row;
+        margin-right: 2.5rem;
+        
+    }
+
+    &__tel{
+        margin-right: 0.3rem;
+    }
+
+    &__number{
+        text-decoration: none;
+        @include text($fontsize: 12px, $color: $forText, $lineheight: 1.5);
+
+        @media ($desktop) {
+            @include text($lineheight: 2.75);
+        }
+    }
+
+
+    &__arrow-down{
+
+        object-fit: cover;
+        width: 24px;
+        height: 14px;
+        padding: 0 8px 0 4px;
+        margin: auto 0;
+    }
+
+}

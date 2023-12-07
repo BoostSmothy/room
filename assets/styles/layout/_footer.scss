@@ -1,0 +1,192 @@
+.footer{
+    @include section();
+
+
+    @media ($desktop) {
+        padding: 97px 120px 51px 120px;
+    }
+    
+    background-color: #2B2B2B;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media ($desktop) {
+            flex-direction: row;
+        }
+    }
+
+    &__img{
+        
+        width: 87px;
+        height: 87px;
+        margin-bottom: 2rem;
+        @media ($desktop) {
+            margin: 0 50px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__lists{
+        
+        display: flex;
+        
+        
+        
+
+        @media ($desktop) {
+            justify-content: center;
+            margin-right: 65px;
+            width: 500px;
+        }
+    }
+
+    &__item{
+        width: 170px;
+        margin-bottom: 20px;
+        margin-right: 1.4rem;
+        @media (screen) {
+            margin-right: 0;
+        }
+        
+    }
+
+    &__title-list{
+        @include text($fontsize: 14px, $color: $whiteDark, $lineheight: normal);
+        margin-bottom: 20px;
+
+        
+    }
+
+    &__text-list{
+        list-style: none;
+        margin: 0 0 0 -40px;
+
+        @include text($fontsize: 14px, $color: $whiteDark, $lineheight: normal);
+        
+    }
+
+    &__follow-us{
+        width: 130px;
+    }
+
+    &__follow-us-title{
+        margin-bottom: 20px;
+        @include text($fontsize: 14px, $color: $whiteDark, $lineheight: normal);
+    }
+
+    &__checkbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+
+        &-lable{
+            display: block;
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 18px;
+            font-size: 22px;
+            user-select: none;
+            
+            
+        }
+
+        &-item{
+            height: 0;
+            width: 0;
+            
+            
+        }
+
+        &-checkmark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 28px;
+            width: 26px;
+            border: 2px solid #FFFFFF80;
+            background-color: #2B2B2B;
+        }
+        
+
+        &-lable:hover input ~ &-checkmark {
+            background-color: lighten(#2B2B2B, 20%);
+        }
+
+        &-lable input:checked ~ &-checkmark {
+            background-color: greenyellow;
+            border: 2px solid darken(greenyellow, 20%);
+        }
+
+        &-lable input:checked ~ &-checkmark:after {
+            display: block;
+        }
+        
+        
+
+        
+    }
+
+
+    &__mailing{
+        display: flex;
+        flex-direction: column;
+        width: 327px;
+
+        &-title,&-text{
+            margin-bottom: 20px;
+            @include text($fontsize: 14px, $color: $whiteDark, $lineheight: normal);
+        }
+
+        &-mail{
+            background-color: #2B2B2B;
+            height: 54px;
+            border-radius: 3px;
+            border: solid 1px rgba(255, 255, 255, 0.4);
+            @include text($fontsize: 20px, $color: $whiteDark, $lineheight: normal);
+
+
+            &:focus {
+                background-color: #FFFFFF66;
+            }
+            margin-bottom: 16px;
+        }
+
+        &-lang{
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: 35px;
+
+            &-text{
+                margin-right: 4px;
+                @include text($fontsize: 14px, $color: #FFFFFF66, $lineheight: normal);
+            }
+
+            &-arrow{
+                width: 14px;
+                height: 7px;
+            }
+        }
+
+        &-reglaming{
+            margin-bottom: 56px;
+            text-transform: uppercase;
+            @include text($fontsize: 11px, $color: #FFFFFF66, $lineheight: normal);
+        }
+
+        &-sign{
+            display: flex;
+            justify-content: end;
+
+            &-up{
+                @include text($fontsize: 14px, $color: #FFFFFF, $lineheight: normal);
+            }
+        }
+    }
+
+}

@@ -1,0 +1,130 @@
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid $borderColor;
+    font-weight: 400;
+
+    @media ($desktop) {
+        padding: 0;
+        
+    }
+
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+
+        @media ($desktop) {
+            width: 100%;
+            margin-left: min(72px, 1%);
+            align-items: center;
+            
+        }
+    }
+
+    &__container-list{
+        height: 0;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.5s;
+        overflow: hidden;
+        background-color: $bgColorUpHeader;
+
+        @media ($desktop) {
+            width: 100%;
+            overflow: visible;
+            position: static;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            align-items: center;
+            transition: 0;
+            
+            padding-left: min(20vh, 20rem);
+            
+        }
+        
+        &.active-nav{
+            height: 220px;
+            opacity: 1;
+        }
+    }
+
+    &__item{
+        list-style-type: none;
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        @include text($fontsize: 15px, $color: $forHeader, $lineheight: 1.2);
+
+        
+
+        @media ($desktop) {
+            margin: 0;
+            width: 176px;
+            height: 100%;
+            padding: 10px 67px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0;
+            
+            &:nth-child(4){
+                width: 100%;
+                justify-content: end;
+                padding: 10px 30px;
+            } 
+        }
+        
+    }
+
+
+    &__logo-img{
+        width: 50px;
+        height: 50px;
+        margin-left: 48px;
+
+    }
+
+    &__showrooms-icon{
+        
+        margin-right: 10px;
+    }
+
+    &__buy{
+        margin-left: 10px;
+        width: 72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-img{
+            margin-right: 1rem;
+            
+            @media ($desktop) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+
+        @media ($desktop) {
+           display: none;
+        }
+    }
+
+}

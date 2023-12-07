@@ -1,0 +1,28 @@
+.gallery{
+    @include section();
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    &__item{
+        margin: 10px;
+    }
+
+    &__img{
+        width: 25rem;
+        height: 25rem;
+        @media ($desktop) {
+            width: 588px;
+            height: 412px;
+        }
+    }
+
+    &__title{
+        @include h2($fontsize: 24px, $color: $forTitle, $lineheight: 28px);
+        
+    }
+}

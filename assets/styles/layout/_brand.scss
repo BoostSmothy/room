@@ -1,0 +1,59 @@
+.brand{
+
+    @include section();
+    align-items: center;
+    
+
+
+    &__container{
+        
+        
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media ($tablet) {
+            width: 600px; 
+        }
+
+        @media ($desktop) {
+            width: 900px;
+        }
+        
+    }
+
+    &__title{
+        text-align: center;
+        @include h2($fontsize: 28px, $color: $forTitle, $lineheight: 1.2);
+        @media ($desktop) {
+            @include h2($fontsize: 48px, $color: $forTitle, $lineheight: 1.2);
+        }
+    }
+
+    &__text{
+        @include text($fontsize: 18px, $color: $greyOther, $lineheight: 1.5);
+        margin-bottom: 2.5rem;
+
+        @media ($tablet) {
+            @include text($fontsize: 20px, $color: $greyOther, $lineheight: 1.5);
+            
+        }
+        
+        @media ($desktop) {
+            @include text($fontsize: 36px, $color: $greyOther, $lineheight: 1.5);
+            margin-bottom: 125px;
+        }
+        
+    }
+
+    &__gallary{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__img{
+        margin: 10px;
+    }
+}

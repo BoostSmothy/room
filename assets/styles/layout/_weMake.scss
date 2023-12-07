@@ -1,0 +1,34 @@
+.we-make{
+    @include section();
+    align-items: center;
+   
+    &__container{
+        
+        display: flex;
+        flex-direction: column;
+        @media ($desktop) {
+            width: 1200px;
+            padding: 100px;
+        }
+    }
+    &__text{
+        @media ($desktop) {
+            @include text($fontsize: 46px, $color: $forText, $lineheight: 1.13);
+
+        }
+
+        @include text($fontsize: 34px, $color: $forText, $lineheight: 1.13);
+
+        margin-bottom: 25px;
+
+    }
+
+    &__title{
+        @include h2($fontsize: 34px, $color: $forTitle, $lineheight: 1.13);
+
+        @media ($desktop) {
+            @include h2($fontsize: 46px, $color: $forTitle, $lineheight: 1.13);
+
+        }
+    }
+}

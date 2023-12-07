@@ -1,0 +1,73 @@
+.sell-bild-design{
+    @include section();
+
+    &__container{
+        
+        display: flex;
+        flex-direction: column;
+
+        @media ($desktop) {
+            padding: 0 48px;
+        }
+        
+        
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media ($desktop) {
+            flex-direction: row;
+        }
+        
+        margin-bottom: 45px;
+
+        @media ($desktop) {
+            &:nth-child(2){
+                flex-direction: row-reverse;
+            }
+        }
+        
+
+    }
+
+    
+
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+
+        @media ($desktop) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__notate{
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media ($desktop) {
+            padding: 0 90px; 
+        }
+        
+    }
+
+    &__title{
+        @include h3($fontsize: 32px, $color: $forTitle, $lineheight: 36px);
+        margin-bottom: 25px;
+    }
+
+    &__text{
+        width: 300px;
+        text-align: justify;
+        @include text($fontsize: 16px, $color: $forText, $lineheight: 24px);
+        
+    }
+
+}
